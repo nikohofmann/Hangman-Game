@@ -114,6 +114,10 @@ document.onkeyup = function(event) {
     setGameOver();
     losses++;
     document.getElementById("jsLosses").innerHTML = "Losses: " + losses;
+    for (i = 0; i < randomWord.length; i++) {
+      blankWord[i] = randomWord.charAt(i);
+    }
+    document.getElementById("jsWord").innerHTML = blankWord.join(" ");
     } else if (remainingLetters === 0) { // If there are no remaining letters, the user has won
     document.getElementById("instructions").style.display = "block";
     document.getElementById("instructions").style.color = "green";
