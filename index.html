@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <title>Hangman</title>
+</head>
+<body>
+  <div class="container">
+    <header class="textCenter">
+      <img src="assets/images/basketball.jpeg" id="basketball" width="100px">
+      <h1>Hangman</h1>
+      <h2>Guess the NBA team before you run out of guesses!</h2>
+      <h3 id="instructions">Press Enter to begin</h3>
+      <button class="btn d-none" id="playAgain" onclick="resetGame()">Play Again!</button>
+    </header>
+  </div>
+  <div class="container">
+    <div class="dottedBorder">
+      <div id="hangmanDiagram">
+        <img id="hangmanImg" src="assets/images/hangman0.png">
+      </div>
+      <div id="gameParameters" class="d-none">
+        <div id="score">
+          <span id="jsWins">Wins: 0</span> <span id="jsLosses">Losses: 0</span>
+        </div>
+        <div id="guessesRemaining">
+          Guesses Remaining: <span id="jsGuessesRemaining"></span>
+        </div>
+        <div id="secretWord">
+          Current Word
+          <br>
+          <span id="jsWord"></span>
+        </div>
+        <div id="lettersGuessed">
+          Letters Guessed
+          <br>
+          <span id="jsLetters"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html>
